@@ -107,8 +107,8 @@ public class Main {
 
 
         do {
-        System.out.println("Ingrese el numero de horas faltadas");
-        horasFalta = ingresar.nextInt();
+            System.out.println("Ingrese el numero de horas faltadas");
+            horasFalta = ingresar.nextInt();
         } while(horasFalta < 0);
         docente.setHorasFaltas(horasFalta);
 
@@ -119,9 +119,22 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Docente docente = new Docente();
+        Docente docente = new Docente("Apellido");
         ingresarDatosDocente(docente);
         System.out.println(docente.getSueldo());
+        Docente d1 = new Docente("Chavez");
+        Docente d2 = new Docente("Aviles");
+        Docente d3 = new Docente("Valverde");
+        Docente d4 = new Docente("Pita");
+
+        ListaDocentes l1 = new ListaDocentes();
+
+        l1.insertar(d1);
+        l1.insertar(d2);
+        l1.insertar(d3);
+        l1.insertar(d4);
+
+        l1.visualizar();
     }
 
 }
