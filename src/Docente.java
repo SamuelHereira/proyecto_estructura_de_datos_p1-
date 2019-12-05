@@ -1,7 +1,9 @@
+import javax.print.Doc;
 import java.util.Scanner;
 
 public class Docente {
 
+    //---------------------Atributos--------------------//
     private String cedula;
     private String nombres;
     private String apellidos;
@@ -13,6 +15,10 @@ public class Docente {
     private int horasTrabajo;
     private float sueldo;
 
+    //---------------------Constructor vacio--------------------//
+    public Docente() {}
+
+    //---------------------Getters y Setters--------------------//
     public String getCedula() {
         return cedula;
     }
@@ -82,7 +88,7 @@ public class Docente {
     }
 
     public void setHorasTrabajo(int dias) {
-        this.horasTrabajo = dias*12;
+        this.horasTrabajo = dias * 12;
     }
 
     public float getSueldo() {
@@ -90,7 +96,7 @@ public class Docente {
     }
 
     public void setSueldo() {
-        /**Dependiendo de la modalidad**/
+        /** Dependiendo de la modalidad */
         if(this.modalidad instanceof Contrato) {
             this.sueldo = Modalidad.SUELDO_CONTRATO_COMPLETO;
         } else if(this.modalidad instanceof Nombramiento) {
@@ -103,7 +109,7 @@ public class Docente {
                 this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_PRINCIPAL_COMPLETO;
             }
         }
-        /** Dependiendo del tipo de carga **/
+        /** Dependiendo del tipo de carga */
         if(this.modalidad.getTipoCarga() == TipoCarga.MEDIO_TIEMPO) {
             this.sueldo = this.sueldo/2;
         }
@@ -111,7 +117,9 @@ public class Docente {
         this.sueldo = this.sueldo - ((this.sueldo/horasTrabajo)*horasFaltas);
     }
 
-    private boolean validacion(String cedula) {
+    //---------------------Validaciones--------------------//
+
+    private static boolean validacionCedula(String cedula) {
 
         int sumaimpar = 0, sumapar = 0, digito = 0, digitofinal = 0, resultado = 0, digitovalidacion = 0;
 
@@ -135,59 +143,63 @@ public class Docente {
         return (digitovalidacion + Character.getNumericValue(cedula.charAt(9)) == 10);
     }
 
-    /**Para INGRESAR DATOS DEL DOCENTE **/
-    public void ingresarDatos(Docente docente) {
-        String nombre, apellido, cedula, direccion, correo, telefono;
-        int modalidad, tipoCarga, horasFalta;
+    //---------------------Crear Instancias de Docente--------------------//
+    public static Docente crearDocente() {
+
         Scanner ingresar = new Scanner(System.in);
 
-        System.out.println("Ingrese los nombres del docente");
-        nombre = ingresar.nextLine();
-        docente.setNombres(nombre);
+        Docente docente = new Docente();
+        String nombre, apellido, cedula, direccion, correo, telefono;
+        int modalidad, tipoCarga, horasFalta;
 
-        System.out.println("Ingrese los apellidos del docente");
+        System.out.println("INGRESE LOS TODOS LOS DATOS DEL DOCENTE");
+        System.out.print("Nombres: ");
+        nombre = ingresar.nextLine();
+        docente.setNombres(nombre); // nombres
+
+        System.out.print("Apellidos: ");
         apellido = ingresar.nextLine();
-        docente.setApellidos(apellido);
+        docente.setApellidos(apellido); // apellidos
 
         do {
-            System.out.println("Ingrese la cedula del docente");
-            cedula = ingresar.nextLine(); // VALIDAR CEDULA
-            if(!validacion(cedula)) {
+            System.out.print("Cédula: ");
+            cedula = ingresar.nextLine();
+            if(!validacionCedula(cedula)) {
                 System.out.println("Ingrese una cedula valida");
             }
-        } while(!validacion(cedula));
-        docente.setCedula(cedula);
+        } while(!validacionCedula(cedula));
+        docente.setCedula(cedula); // cédula validada
 
-        System.out.println("Ingrese la direccion del docente");
+        System.out.print("Dirección domiciliaria: ");
         direccion = ingresar.nextLine();
-        docente.setDireccion(direccion);
+        docente.setDireccion(direccion); // dirección
 
         do {
-            System.out.println("Ingrese el correo del docente");
-            correo = ingresar.nextLine(); // VALIDAR QUE CONTENGA @
+            System.out.print("Correo electrónico: ");
+            correo = ingresar.nextLine();
             if(!correo.contains("@")) {
                 System.out.println("Ingrese un correo valido");
             }
         } while(!correo.contains("@"));
-        docente.setCorreo(correo);
+        docente.setCorreo(correo); // correo validado
 
         do {
-            System.out.println("Ingrese el numero de telefono del docente");
+            System.out.print("Teléfono: ");
             telefono = ingresar.nextLine();
-        } while(telefono.length() != 10 || !telefono.matches("[0-9]+")); // VALIDAR QUE SEA DE 10 DIGITOS
-        docente.setTelefono(telefono);
+        } while(telefono.length() != 10 || !telefono.matches("[0-9]+"));
+        docente.setTelefono(telefono); // teléfono validado
 
         do {
-            System.out.println("Modalidad de contrato del docente: \n1. Contrato \t 2. Nombramiento");
+            System.out.print("Modalidad de contrato del docente\n1. Contrato \t2. Nombramiento\nSeleccione una opción: ");
             modalidad = ingresar.nextInt();
         } while(modalidad != 1 && modalidad != 2);
         if (modalidad == 1) {
-            docente.setModalidad(new Contrato());
+            docente.setModalidad(new Contrato()); // modalidad contrato
         } else if (modalidad == 2) {
             int tipo;
-            docente.setModalidad(new Nombramiento());
+            docente.setModalidad(new Nombramiento()); // modalidad nombramiento
             do {
-                System.out.println("Tipo de nombramiento del docente \n1. Auxiliar \t 2. Agregado \t 3. Pricipal");
+                System.out.print("Tipo de nombramiento del docente \n1. Auxiliar \t2. Agregado \t3. Pricipal\nSeleccione una opción: ");
                 tipo = ingresar.nextInt();
                 if (docente.getModalidad() instanceof Nombramiento) {
                     if (tipo == 1) {
@@ -203,27 +215,25 @@ public class Docente {
         }
 
         do {
-            System.out.println("Tipo de carga del docente \n1. Medio Tiempo \t 2. Tiempo Completo");
+            System.out.print("Tipo de carga del docente \n1. Medio Tiempo \t2. Tiempo Completo\nSeleccione una opción: ");
             tipoCarga = ingresar.nextInt();
         } while(tipoCarga !=1 && tipoCarga != 2);
         if (tipoCarga == 1) {
-            docente.getModalidad().setTipoCarga(TipoCarga.MEDIO_TIEMPO);
+            docente.getModalidad().setTipoCarga(TipoCarga.MEDIO_TIEMPO); // carga medio tiempo
         } else if (tipoCarga == 2) {
-            docente.getModalidad().setTipoCarga(TipoCarga.TIEMPO_COMPLETO);
-        } else {
-            /** VALIDAR **/
+            docente.getModalidad().setTipoCarga(TipoCarga.TIEMPO_COMPLETO); // carga tiempo completo
         }
 
-
         do {
-            System.out.println("Ingrese el numero de horas faltadas");
+            System.out.print("Cantidad horas faltadas: ");
             horasFalta = ingresar.nextInt();
         } while(horasFalta < 0);
-        docente.setHorasFaltas(horasFalta);
+        docente.setHorasFaltas(horasFalta); // horas faltadas
 
-        docente.setHorasTrabajo(30);
-        docente.setSueldo();
+        docente.setHorasTrabajo(30); // horas trabajadas
+        docente.setSueldo(); // sueldo total
 
-
+        return docente; // devuelve la instancia de docente completamente validada
     }
+
 }

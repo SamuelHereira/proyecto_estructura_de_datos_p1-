@@ -9,17 +9,9 @@ public class ListaDocentes {
         this.inicio = null;
     }
 
-    private Nodo crearDocente() {
-        Docente docente = new Docente();
-        docente.ingresarDatos(docente);
-        Nodo nuevoNodo = new Nodo(docente);
-        return nuevoNodo;
-    }
-
-    public void insertarDocente() {
+    public void insertarDocente(Docente docente) {
         Nodo nuevo;
-        nuevo = crearDocente();
-
+        nuevo = new Nodo(docente);
         if (inicio == null) {
             inicio = nuevo;
         } else if (nuevo.getDocente().getApellidos().compareTo(inicio.getDocente().getApellidos()) < 0) {

@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="12f43e4a-af91-445f-bc40-f78e9684c6aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/ListaDocentes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/ListaDocentes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Docente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Docente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ListaDocentes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaDocentes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -11,6 +14,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,30 +170,35 @@
     <option name="LAST_COMMIT_MESSAGE" value="Se agregó el ingreso de datos&#10;Faltan Validaciones" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1575566498460">
+    <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1575580452693">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575566498460" />
+    <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1575580452693" />
     <state x="209" y="0" key="CommitChangelistDialog2" timestamp="1575571056269">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="209" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571056269" />
-    <state width="1323" height="405" key="GridCell.Tab.0.bottom" timestamp="1575578145925">
+    <state width="1323" height="570" key="GridCell.Tab.0.bottom" timestamp="1575581839120">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="405" key="GridCell.Tab.0.center" timestamp="1575578145925">
+    <state width="1323" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575581839120" />
+    <state width="1323" height="570" key="GridCell.Tab.0.center" timestamp="1575581839120">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="405" key="GridCell.Tab.0.left" timestamp="1575578145925">
+    <state width="1323" height="570" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575581839120" />
+    <state width="1323" height="570" key="GridCell.Tab.0.left" timestamp="1575581839119">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="405" key="GridCell.Tab.0.right" timestamp="1575578145925">
+    <state width="1323" height="570" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575581839119" />
+    <state width="1323" height="570" key="GridCell.Tab.0.right" timestamp="1575581839120">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575581839120" />
     <state x="129" y="55" key="MergeDialog" timestamp="1575576033328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
