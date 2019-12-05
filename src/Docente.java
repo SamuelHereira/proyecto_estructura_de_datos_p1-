@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
 public class Docente {
 
     private String cedula;
@@ -6,6 +8,10 @@ public class Docente {
     private String direccion;
     private String correo;
     private String telefono;
+    private Modalidad modalidad;
+    private int horasFaltas;
+    private int horasTrabajo;
+    private float sueldo;
 
     public String getCedula() {
         return cedula;
@@ -53,5 +59,53 @@ public class Docente {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public Modalidad getModalidad() {
+        return modalidad;
+    }
+
+    public void setModalidad(Modalidad modalidad) {
+        this.modalidad = modalidad;
+    }
+
+    public int getHorasFaltas() {
+        return horasFaltas;
+    }
+
+    public void setHorasFaltas(int horasFaltas) {
+        this.horasFaltas = horasFaltas;
+    }
+
+    public int getHorasTrabajo() {
+        return horasTrabajo;
+    }
+
+    public void setHorasTrabajo(int horasTrabajo) {
+        this.horasTrabajo = horasTrabajo;
+    }
+
+    public float getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo() {
+        /**Dependiendo de la modalidad**/
+        if(this.modalidad instanceof Contrato) {
+            this.sueldo = Modalidad.SUELDO_CONTRATO_COMPLETO;
+        } else if(this.modalidad instanceof Nombramiento) {
+
+            if(((Nombramiento) this.modalidad).getTipoNombramiento() == TipoNombramiento.AUXILIAR) {
+                this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AUXILIAR_COMPLETO;
+            } else if(((Nombramiento) this.modalidad).getTipoNombramiento() == TipoNombramiento.AGREGADO) {
+                this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AGREGADO_COMPLETO;
+            } else if(((Nombramiento) this.modalidad).getTipoNombramiento() == TipoNombramiento.PRINCIPAL) {
+                this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_PRINCIPAL_COMPLETO;
+            }
+        }
+        /** Dependiendo del tipo de carga **/
+        if(this.modalidad.getTipoCarga() == TipoCarga.MEDIO_TIEMPO) {
+            this.sueldo = this.sueldo/2;
+        }
     }
 }
