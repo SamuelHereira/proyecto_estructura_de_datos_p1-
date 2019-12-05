@@ -1,4 +1,5 @@
 import javax.print.Doc;
+import java.util.Scanner;
 
 public class ListaDocentes {
 
@@ -8,24 +9,31 @@ public class ListaDocentes {
         this.inicio = null;
     }
 
-    public void insertar(Docente docente) {
+    private Nodo crearDocente() {
+        Docente docente = new Docente();
+        docente.ingresarDatos(docente);
+        Nodo nuevoNodo = new Nodo(docente);
+        return nuevoNodo;
+    }
+
+    public void insertarDocente() {
         Nodo nuevo;
-        nuevo = new Nodo(docente);
+        nuevo = crearDocente();
 
         if (inicio == null) {
             inicio = nuevo;
-        } else if (docente.getApellidos().compareTo(inicio.getDocente().getApellidos()) < 0) {
+        } else if (nuevo.getDocente().getApellidos().compareTo(inicio.getDocente().getApellidos()) < 0) {
             nuevo.siguiente = inicio;
             inicio.anteiror = nuevo;
             inicio = nuevo;
         } else {
             Nodo aux;
             aux = inicio;
-            while ((aux.siguiente != null) && (docente.getApellidos().compareTo(aux.getDocente().getApellidos()) > 0)) {
+            while ((aux.siguiente != null) && (nuevo.getDocente().getApellidos().compareTo(aux.getDocente().getApellidos()) > 0)) {
                 aux = aux.siguiente;
             }
 
-            if (docente.getApellidos().compareTo(aux.getDocente().getApellidos()) > 0) {
+            if (nuevo.getDocente().getApellidos().compareTo(aux.getDocente().getApellidos()) > 0) {
                 aux.siguiente = nuevo;
                 nuevo.anteiror = aux;
             } else {
@@ -41,9 +49,15 @@ public class ListaDocentes {
     public void visualizar() {
         Nodo aux;
         aux = inicio;
-        while (aux != null) {
-            System.out.println(aux.getDocente().getApellidos() + " ");
-            aux = aux.siguiente;
+        if(inicio != null) {
+            while (aux != null) {
+                System.out.println(aux.getDocente().getApellidos() + " ");
+                aux = aux.siguiente;
+            }
+        } else {
+            System.out.println("LISTA VACIA");
         }
     }
+
+
 }

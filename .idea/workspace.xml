@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12f43e4a-af91-445f-bc40-f78e9684c6aa" name="Default Changelist" comment="" />
+    <list default="true" id="12f43e4a-af91-445f-bc40-f78e9684c6aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Docente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Docente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ListaDocentes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaDocentes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,12 +86,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3306c160-92c6-473d-acae-ccd0b90ad9d6" name="Default Changelist" comment="" />
+      <changelist id="12f43e4a-af91-445f-bc40-f78e9684c6aa" name="Default Changelist" comment="" />
       <created>1575564668213</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575564668213</updated>
       <workItem from="1575564678447" duration="7806000" />
+      <workItem from="1575576500097" duration="1418000" />
     </task>
     <task id="LOCAL-00001" summary="Se agregó el main">
       <created>1575564989261</created>
@@ -155,22 +161,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="209" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571056269" />
-    <state width="1323" height="570" key="GridCell.Tab.0.bottom" timestamp="1575572591951">
+    <state width="1323" height="405" key="GridCell.Tab.0.bottom" timestamp="1575578145925">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575572591951" />
-    <state width="1323" height="570" key="GridCell.Tab.0.center" timestamp="1575572591951">
+    <state width="1323" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="405" key="GridCell.Tab.0.center" timestamp="1575578145925">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="570" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575572591951" />
-    <state width="1323" height="570" key="GridCell.Tab.0.left" timestamp="1575572591951">
+    <state width="1323" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="405" key="GridCell.Tab.0.left" timestamp="1575578145925">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="570" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575572591951" />
-    <state width="1323" height="570" key="GridCell.Tab.0.right" timestamp="1575572591951">
+    <state width="1323" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="405" key="GridCell.Tab.0.right" timestamp="1575578145925">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575572591951" />
+    <state width="1323" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
     <state x="129" y="55" key="MergeDialog" timestamp="1575576033328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -187,10 +193,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571060066" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1575564676603">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1575576500035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575564676603" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575576500035" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575567384710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
