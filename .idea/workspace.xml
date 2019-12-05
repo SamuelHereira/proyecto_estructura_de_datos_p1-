@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3306c160-92c6-473d-acae-ccd0b90ad9d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Contrato.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Modalidad.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Nombramiento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/TipoCarga.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/TipoNombramiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Docente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Docente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Nombramiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nombramiento.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Samuel\IdeaProjects\proyecto_estructura_de_datos_p1\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UZWazt3SXRZZUFhgFpwoDAeuMn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="proyecto_estructura_de_datos_p1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3306c160-92c6-473d-acae-ccd0b90ad9d6" name="Default Changelist" comment="" />
+      <created>1575564668213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575564668213</updated>
+      <workItem from="1575564678447" duration="6152000" />
+    </task>
+    <task id="LOCAL-00001" summary="Se agregó el main">
+      <created>1575564989261</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575564989261</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se agregaron las clases y enums pricipales">
+      <created>1575565767378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575565767378</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se agregaron las clases y enums pricipales">
+      <created>1575565980644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575565980644</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se agregó el calculo del sueldo mensual segun modalidad y tipo de carga">
+      <created>1575567300638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575567300638</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se agregó el main" />
+    <MESSAGE value="Se agregaron las clases y enums pricipales" />
+    <MESSAGE value="Se agregó el calculo del sueldo mensual segun modalidad y tipo de carga" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó el calculo del sueldo mensual segun modalidad y tipo de carga" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1575566498460">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575566498460" />
+    <state x="209" y="0" key="CommitChangelistDialog2" timestamp="1575571035329">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="209" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571035329" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1575571035344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571035344" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1575571035344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571035344" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1575571035344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571035344" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1575571035344">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571035344" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1575566124591">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575566124591" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1575567302263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575567302263" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1575564676603">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575564676603" />
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575567384710">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575567384710" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1575569761280">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575569761280" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1575566681288">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575566681288" />
+  </component>
+</project>

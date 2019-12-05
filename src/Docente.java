@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.operations.Mod;
-
 public class Docente {
 
     private String cedula;
@@ -81,8 +79,8 @@ public class Docente {
         return horasTrabajo;
     }
 
-    public void setHorasTrabajo(int horasTrabajo) {
-        this.horasTrabajo = horasTrabajo;
+    public void setHorasTrabajo(int dias) {
+        this.horasTrabajo = dias*12;
     }
 
     public float getSueldo() {
@@ -107,5 +105,7 @@ public class Docente {
         if(this.modalidad.getTipoCarga() == TipoCarga.MEDIO_TIEMPO) {
             this.sueldo = this.sueldo/2;
         }
+
+        this.sueldo = this.sueldo - ((this.sueldo/horasTrabajo)*horasFaltas);
     }
 }
