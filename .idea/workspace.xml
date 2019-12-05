@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3306c160-92c6-473d-acae-ccd0b90ad9d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="12f43e4a-af91-445f-bc40-f78e9684c6aa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,6 +129,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se agregó el main" />
     <MESSAGE value="Se agregaron las clases y enums pricipales" />
@@ -166,6 +171,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575572591951" />
+    <state x="129" y="55" key="MergeDialog" timestamp="1575576033328">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575576033328" />
+    <state x="395" y="81" key="MultipleFileMergeDialog" timestamp="1575576033336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575576033336" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1575566124591">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -182,6 +195,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575567384710" />
+    <state x="415" y="167" key="git4idea.merge.GitMergeDialog" timestamp="1575575847385">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="415" y="167" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1575575847385" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1575569761280">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
