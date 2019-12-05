@@ -11,6 +11,10 @@ public class Docente {
     private int horasTrabajo;
     private float sueldo;
 
+    public Docente(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
     public String getCedula() {
         return cedula;
     }
