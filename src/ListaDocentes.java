@@ -47,8 +47,17 @@ public class ListaDocentes {
                 aux = aux.siguiente;
             }
         } else {
-            System.out.println("LISTA VACIA");
+            System.out.println("La lista está vacía");
         }
+    }
+
+    public Nodo buscarDocente(String cedula) throws NullPointerException {
+        for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
+            if (cedula.equals(aux.getDocente().getCedula())) {
+                return aux;
+            }
+        }
+        return null;
     }
 
 

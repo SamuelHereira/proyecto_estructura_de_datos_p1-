@@ -14,6 +14,7 @@ public class Docente {
     private int horasFaltas;
     private int horasTrabajo;
     private float sueldo;
+    private boolean isPagado;
 
     //---------------------Constructor vacio--------------------//
     public Docente() {}
@@ -115,6 +116,14 @@ public class Docente {
         }
 
         this.sueldo = this.sueldo - ((this.sueldo/horasTrabajo)*horasFaltas);
+    }
+
+    public boolean getPagado() {
+        return isPagado;
+    }
+
+    public void setPagado(boolean isPagado) {
+        this.isPagado = isPagado;
     }
 
     //---------------------Validaciones--------------------//
@@ -232,6 +241,7 @@ public class Docente {
 
         docente.setHorasTrabajo(30); // horas trabajadas
         docente.setSueldo(); // sueldo total
+        docente.setPagado(false);
 
         return docente; // devuelve la instancia de docente completamente validada
     }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f43e4a-af91-445f-bc40-f78e9684c6aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Universidad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/ListaDocentes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/ListaDocentes.class" afterDir="false" />
@@ -32,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -146,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575571058269</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cambios de estructura en los métodos">
+      <created>1575582023645</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575582023645</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +175,8 @@
     <MESSAGE value="Se agregaron las clases y enums pricipales" />
     <MESSAGE value="Se agregó el calculo del sueldo mensual segun modalidad y tipo de carga" />
     <MESSAGE value="Se agregó el ingreso de datos&#10;Faltan Validaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregó el ingreso de datos&#10;Faltan Validaciones" />
+    <MESSAGE value="Cambios de estructura en los métodos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios de estructura en los métodos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1575580452693">
@@ -175,30 +184,31 @@
     </state>
     <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575566498460" />
     <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1575580452693" />
-    <state x="209" y="0" key="CommitChangelistDialog2" timestamp="1575571056269">
+    <state x="209" y="0" key="CommitChangelistDialog2" timestamp="1575582021215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="209" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571056269" />
-    <state width="1323" height="570" key="GridCell.Tab.0.bottom" timestamp="1575581839120">
+    <state x="209" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1575582021215" />
+    <state width="1323" height="228" key="GridCell.Tab.0.bottom" timestamp="1575587880501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575581839120" />
-    <state width="1323" height="570" key="GridCell.Tab.0.center" timestamp="1575581839120">
+    <state width="1323" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575587880501" />
+    <state width="1323" height="228" key="GridCell.Tab.0.center" timestamp="1575587880501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="570" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575581839120" />
-    <state width="1323" height="570" key="GridCell.Tab.0.left" timestamp="1575581839119">
+    <state width="1323" height="228" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575587880501" />
+    <state width="1323" height="228" key="GridCell.Tab.0.left" timestamp="1575587880500">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="570" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575581839119" />
-    <state width="1323" height="570" key="GridCell.Tab.0.right" timestamp="1575581839120">
+    <state width="1323" height="228" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575587880500" />
+    <state width="1323" height="228" key="GridCell.Tab.0.right" timestamp="1575587880501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
-    <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575581839120" />
+    <state width="1323" height="228" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575587880501" />
     <state x="129" y="55" key="MergeDialog" timestamp="1575576033328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -211,10 +221,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575566124591" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1575571060066">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1575582027022">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575571060066" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1575582027022" />
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1575576500035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
