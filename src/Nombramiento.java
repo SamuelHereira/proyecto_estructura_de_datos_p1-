@@ -1,4 +1,5 @@
 public class Nombramiento extends Modalidad {
+
     private TipoNombramiento tipoNombramiento;
 
     public TipoNombramiento getTipoNombramiento() {

@@ -161,6 +161,8 @@ public class Docente {
         String nombre, apellido, cedula, direccion, correo, telefono;
         int modalidad, tipoCarga, horasFalta;
 
+        System.out.println("-----------------------------------------------------------------");
+
         System.out.println("INGRESE LOS TODOS LOS DATOS DEL DOCENTE");
         System.out.print("Nombres: ");
         nombre = ingresar.nextLine();
@@ -246,4 +248,28 @@ public class Docente {
         return docente; // devuelve la instancia de docente completamente validada
     }
 
+    //---------------------Datos del Docente--------------------//
+    @Override
+    public String toString() {
+        String msjPago;
+        if (this.isPagado) {
+            msjPago = "El pago ya ha sido realizado con éxito";
+        } else {
+            msjPago = "El pago aún no ha sido realizado";
+        }
+
+        String msjModalidad;
+        if (this.modalidad instanceof  Contrato) {
+            msjModalidad = "Modalidad: Contrato y carga " + this.modalidad.getTipoCarga().getNombre();
+        } else {
+            msjModalidad = "Modalidad: Nombramiento de tipo " + ((Nombramiento) this.modalidad).getTipoNombramiento().getNombre() + " y tipo de carga " + this.modalidad.getTipoCarga().getNombre();
+        }
+        return "-----------------------------------------------------------------" +
+                "\nNombres: " + this.nombres + "\nApellidos: " + this.apellidos +
+                "\nCédula: " + this.cedula + "\nDirección: " + this.direccion +
+                "\nCorreo: " + this.correo + "\nTeléfono: " + this.telefono +
+                "\n" + msjModalidad + "\nHoras trabajas: " + this.horasTrabajo +
+                "\nHoras faltadas: " + this.horasFaltas + "\nSueldo: " + this.sueldo +
+                "\n" + msjPago;
+    }
 }

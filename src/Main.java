@@ -11,21 +11,28 @@ public class Main {
         int opc = 0;
 
         do {
+            System.out.println("-----------------------------------------------------------------");
             System.out.println("PAGO DE DOCENTES");
             System.out.println("1. Insertar Docente");
             System.out.println("2. Realizar pago a docente");
             System.out.println("3. Consular docente");
-            System.out.println("4. Salir");
+            System.out.println("4. Listar docentes");
+            System.out.println("5. Eliminar docente");
+            System.out.println("6. Que todos se vayan alv");
+            System.out.println("7. Salir");
             System.out.print("Seleccione una opción: ");
             opc = entrada.nextInt();
 
             switch(opc) {
                 case 1:
                     l1.insertarDocente(Docente.crearDocente());
+                    System.out.println("Datos del docente guardados con éxito");
                     break;
                 case 2:
                     try {
                         entrada.nextLine();
+                        System.out.println("-----------------------------------------------------------------");
+                        System.out.println("REALIZAR PAGO A DOCENTE");
                         System.out.print("Cédula: ");
                         cedula = entrada.nextLine();
                         Universidad.pagarDocente(l1.buscarDocente(cedula).getDocente());
@@ -34,15 +41,40 @@ public class Main {
                     }
                     break;
                 case 3:
-                    l1.visualizar();
+                    try {
+                        entrada.nextLine();
+                        System.out.println("-----------------------------------------------------------------");
+                        System.out.println("CONSULTAR DOCENTE");
+                        System.out.print("Cédula: ");
+                        cedula = entrada.nextLine();
+                        System.out.println(l1.buscarDocente(cedula).getDocente());
+                    } catch (NullPointerException e) {
+                        System.out.println("Docente no registrado, no se puede mostrar información");
+                    }
+                    break;
                 case 4:
+                    System.out.println("-----------------------------------------------------------------");
+                    System.out.println("LISTA DE TODOS LOS DOCENTES");
+                    l1.visualizar();
+                    break;
+                case 5:
+                    entrada.nextLine();
+                    System.out.println("-----------------------------------------------------------------");
+                    System.out.println("ELIMINAR DOCENTE");
+                    System.out.print("Cédula: ");
+                    cedula = entrada.nextLine();
+                    l1.eliminarDocente(cedula);
+                    break;
+                case 6:
+
+                case 7:
                     System.exit(1);
                     break;
                 default:
-                    System.out.println("Ingrese una opcion valida");
+                    System.out.println("Ingrese una opción valida");
             }
 
-        } while(opc != 4);
+        } while(opc != 7);
 
 
     }
