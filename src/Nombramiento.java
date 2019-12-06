@@ -5,7 +5,6 @@ public class Nombramiento extends Modalidad {
     public TipoNombramiento getTipoNombramiento() {
         return tipoNombramiento;
     }
-
     public void setTipoNombramiento(TipoNombramiento tipoNombramiento) {
         this.tipoNombramiento = tipoNombramiento;
     }

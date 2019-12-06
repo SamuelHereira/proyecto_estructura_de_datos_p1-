@@ -2,6 +2,19 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void menuPrincipal() {
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("PAGO DE DOCENTES");
+        System.out.println("1. Insertar Docente");
+        System.out.println("2. Realizar pago a docente");
+        System.out.println("3. Consular docente");
+        System.out.println("4. Listar docentes");
+        System.out.println("5. Eliminar docente");
+        System.out.println("6. Exportar registro de docentes");
+        System.out.println("7. Salir");
+        System.out.print("Seleccione una opción: ");
+    }
+
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
@@ -11,16 +24,7 @@ public class Main {
         int opc = 0;
 
         do {
-            System.out.println("-----------------------------------------------------------------");
-            System.out.println("PAGO DE DOCENTES");
-            System.out.println("1. Insertar Docente");
-            System.out.println("2. Realizar pago a docente");
-            System.out.println("3. Consular docente");
-            System.out.println("4. Listar docentes");
-            System.out.println("5. Eliminar docente");
-            System.out.println("6. Exportar registro de docentes");
-            System.out.println("7. Salir");
-            System.out.print("Seleccione una opción: ");
+            Main.menuPrincipal();
             opc = entrada.nextInt();
 
             switch(opc) {
@@ -35,10 +39,8 @@ public class Main {
                         System.out.println("REALIZAR PAGO A DOCENTE");
                         System.out.print("Cédula: ");
                         cedula = entrada.nextLine();
-                        Universidad.pagarDocente(l1.buscarDocente(cedula).getDocente());
-                    } catch (NullPointerException e) {
-                        System.out.println("Docente no registrado, no se pudo realizar el pago");
-                    }
+                        Administracion.pagarDocente(l1.buscarDocente(cedula).getDocente());
+                    } catch (NullPointerException e) { }
                     break;
                 case 3:
                     try {
@@ -48,9 +50,7 @@ public class Main {
                         System.out.print("Cédula: ");
                         cedula = entrada.nextLine();
                         System.out.println(l1.buscarDocente(cedula).getDocente());
-                    } catch (NullPointerException e) {
-                        System.out.println("Docente no registrado, no se puede mostrar información");
-                    }
+                    } catch (NullPointerException e) { }
                     break;
                 case 4:
                     System.out.println("-----------------------------------------------------------------");

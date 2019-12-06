@@ -1,7 +1,4 @@
-import java.io.*;
-import java.io.FileWriter;
-
-public class Universidad {
+public class Administracion {
 
     public static void pagarDocente(Docente docente) {
         if (!docente.getPagado()) {

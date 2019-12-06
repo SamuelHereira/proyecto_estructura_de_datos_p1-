@@ -56,63 +56,77 @@ public class ListaDocentes {
     }
 
     public Nodo buscarDocente(String cedula) throws NullPointerException {
-        for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
-            if (cedula.equals(aux.getDocente().getCedula())) {
-                return aux;
+        if (inicio != null) {
+            for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
+                if (cedula.equals(aux.getDocente().getCedula())) {
+                    return aux;
+                }
             }
+            System.out.println("Docente no encontrado");
+            return null;
+        } else {
+            System.out.println("Lista vacía, no se puede buscar");
+            return null;
         }
-        return null;
+
     }
 
     public void eliminarDocente(String cedula) {
-        Nodo actual = inicio;
-        boolean encontrado = false;
-
-        while ((actual != null) && (!encontrado)) {
-            encontrado = (cedula.equals(actual.getDocente().getCedula()));
-            if (!encontrado) actual = actual.siguiente;
-        }
-
-        if (actual != null) {
-            if (actual == inicio) {
-                inicio = actual.siguiente;
-                if (actual.siguiente != null) actual.siguiente.anteiror = null;
-            } else if (actual.siguiente != null) {
-                actual.anteiror.siguiente = actual.siguiente;
-                actual.siguiente.anteiror = actual.anteiror;
-            } else {
-                actual.anteiror.siguiente = null;
-                actual = null;
+        if (inicio != null) {
+            Nodo actual = inicio;
+            boolean encontrado = false;
+            while ((actual != null) && (!encontrado)) {
+                encontrado = (cedula.equals(actual.getDocente().getCedula()));
+                if (!encontrado) actual = actual.siguiente;
             }
-            System.out.println("Docente eliminado de los registros con éxito");
+
+            if (actual != null) {
+                if (actual == inicio) {
+                    inicio = actual.siguiente;
+                    if (actual.siguiente != null) actual.siguiente.anteiror = null;
+                } else if (actual.siguiente != null) {
+                    actual.anteiror.siguiente = actual.siguiente;
+                    actual.siguiente.anteiror = actual.anteiror;
+                } else {
+                    actual.anteiror.siguiente = null;
+                    actual = null;
+                }
+                System.out.println("Docente eliminado de los registros con éxito");
+            } else {
+                System.out.println("Docente no encontrado, no se puede eliminar");
+            }
         } else {
-            System.out.println("Docente no encontrado, no se puede eliminar");
+            System.out.println("La lista está vacía, no se puede eliminar");
         }
     }
 
     public void exportarListaTxt() {
-        File file = new File("src/registro.txt");
-        FileWriter flwriter = null;
-        try {
-            flwriter = new FileWriter(file, true);
-            BufferedWriter bfwriter = new BufferedWriter(flwriter);
-            for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
-                bfwriter.write(aux.getDocente().toString());
-            }
-            bfwriter.close();
-            System.out.println("Archivo modificado satisfactoriamente..");
+        if (inicio != null) {
+            File file = new File("registro.txt");
+            FileWriter flwriter = null;
+            try {
+                flwriter = new FileWriter(file, true);
+                BufferedWriter bfwriter = new BufferedWriter(flwriter);
+                for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
+                    bfwriter.write(aux.getDocente().toString());
+                }
+                bfwriter.close();
+                System.out.println("Archivo generado satisfactoriamente..");
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (flwriter != null) {
-                try {
-                    flwriter.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (flwriter != null) {
+                    try {
+                        flwriter.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
+        } else {
+            System.out.println("Lista vacía, no hay registros que exportar");
         }
-    }
 
+    }
 }
