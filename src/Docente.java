@@ -264,7 +264,7 @@ public class Docente {
         } else {
             msjModalidad = "Modalidad: Nombramiento de tipo " + ((Nombramiento) this.modalidad).getTipoNombramiento().getNombre() + " y tipo de carga " + this.modalidad.getTipoCarga().getNombre();
         }
-        return "-----------------------------------------------------------------" +
+        return "\n-----------------------------------------------------------------" +
                 "\nNombres: " + this.nombres + "\nApellidos: " + this.apellidos +
                 "\nCédula: " + this.cedula + "\nDirección: " + this.direccion +
                 "\nCorreo: " + this.correo + "\nTeléfono: " + this.telefono +

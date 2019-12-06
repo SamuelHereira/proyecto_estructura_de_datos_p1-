@@ -6,15 +6,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Docente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/ListaDocentes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/ListaDocentes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Nombramiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Nombramiento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/TipoCarga.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/TipoCarga.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/TipoNombramiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/TipoNombramiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Universidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto_estructura_de_datos_p1/Universidad.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Docente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Docente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ListaDocentes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ListaDocentes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Nombramiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nombramiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipoCarga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipoCarga.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipoNombramiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipoNombramiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Universidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Universidad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +183,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -203,6 +201,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Opción pagar docente" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Auto_Import" timestamp="1575600139727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Auto_Import/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575600139727" />
     <state x="488" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1575588554383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -217,25 +219,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1575588448317" />
-    <state width="1323" height="570" key="GridCell.Tab.0.bottom" timestamp="1575595056189">
+    <state width="1323" height="570" key="GridCell.Tab.0.bottom" timestamp="1575601747309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="405" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575601747309" />
     <state width="1323" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575595056189" />
-    <state width="1323" height="570" key="GridCell.Tab.0.center" timestamp="1575595056189">
+    <state width="1323" height="570" key="GridCell.Tab.0.center" timestamp="1575601747309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="405" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="570" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575601747309" />
     <state width="1323" height="570" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575595056189" />
-    <state width="1323" height="570" key="GridCell.Tab.0.left" timestamp="1575595056189">
+    <state width="1323" height="570" key="GridCell.Tab.0.left" timestamp="1575601747309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="405" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="570" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575601747309" />
     <state width="1323" height="570" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575595056189" />
-    <state width="1323" height="570" key="GridCell.Tab.0.right" timestamp="1575595056189">
+    <state width="1323" height="570" key="GridCell.Tab.0.right" timestamp="1575601747309">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="405" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575578145925" />
+    <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1575601747309" />
     <state width="1323" height="570" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575595056189" />
     <state x="129" y="55" key="MergeDialog" timestamp="1575576033328">
       <screen x="0" y="0" width="1366" height="728" />

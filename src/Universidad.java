@@ -1,3 +1,6 @@
+import java.io.*;
+import java.io.FileWriter;
+
 public class Universidad {
 
     public static void pagarDocente(Docente docente) {
@@ -7,4 +10,5 @@ public class Universidad {
         }
         else System.out.println("El pago a este docente ya fue realizado");
     }
+
 }

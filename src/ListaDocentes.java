@@ -1,4 +1,8 @@
 import javax.print.Doc;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ListaDocentes {
@@ -86,5 +90,29 @@ public class ListaDocentes {
         }
     }
 
+    public void exportarListaTxt() {
+        File file = new File("src/registro.txt");
+        FileWriter flwriter = null;
+        try {
+            flwriter = new FileWriter(file, true);
+            BufferedWriter bfwriter = new BufferedWriter(flwriter);
+            for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
+                bfwriter.write(aux.getDocente().toString());
+            }
+            bfwriter.close();
+            System.out.println("Archivo modificado satisfactoriamente..");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (flwriter != null) {
+                try {
+                    flwriter.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 
 }

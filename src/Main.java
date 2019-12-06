@@ -18,7 +18,7 @@ public class Main {
             System.out.println("3. Consular docente");
             System.out.println("4. Listar docentes");
             System.out.println("5. Eliminar docente");
-            System.out.println("6. Que todos se vayan alv");
+            System.out.println("6. Exportar registro de docentes");
             System.out.println("7. Salir");
             System.out.print("Seleccione una opción: ");
             opc = entrada.nextInt();
@@ -66,7 +66,8 @@ public class Main {
                     l1.eliminarDocente(cedula);
                     break;
                 case 6:
-
+                    l1.exportarListaTxt();
+                    break;
                 case 7:
                     System.exit(1);
                     break;
