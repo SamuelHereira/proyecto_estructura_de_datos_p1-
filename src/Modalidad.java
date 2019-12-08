@@ -1,4 +1,4 @@
-public class Modalidad {
+public abstract class Modalidad {
 
     public static final int SUELDO_CONTRATO_COMPLETO = 2100;
     public static final int SUELDO_CONTRATO_MEDIO = 1050;

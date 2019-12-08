@@ -246,8 +246,8 @@ public class Docente {
         do {
             System.out.print(Main.ANSI_PURPLE + "Cantidad horas faltadas: " + Main.ANSI_RESET);
             horasFalta = ingresar.nextLine();
-            if (!horasFalta.matches("[0-50]")) System.out.println(Main.ANSI_RED + "Ingrese un opción válida" + Main.ANSI_RESET);
-        } while(!horasFalta.matches("[0-50]"));
+            if (!horasFalta.matches("[0-50]+")) System.out.println(Main.ANSI_RED + "Ingrese un opción válida" + Main.ANSI_RESET);
+        } while(!horasFalta.matches("[0-50]+"));
         faltas = Integer.parseInt(horasFalta); // cantidad validada
 
         docente.setHorasFaltas(faltas); // horas faltadas
