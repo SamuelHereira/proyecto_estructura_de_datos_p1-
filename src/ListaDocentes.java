@@ -45,7 +45,7 @@ public class ListaDocentes {
         aux = inicio;
         if(inicio != null) {
             while (aux != null) {
-                System.out.println(aux.getDocente());
+                aux.getDocente().imprimirDatos();
                 aux = aux.siguiente;
             }
         } else {
@@ -67,6 +67,14 @@ public class ListaDocentes {
             return null;
         }
 
+    }
+
+    public int longitud() {
+        int contador = 0;
+        for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
+            contador++;
+        }
+        return contador;
     }
 
     public void eliminarDocente(String cedula) {
@@ -103,13 +111,14 @@ public class ListaDocentes {
             File file = new File("registro.txt");
             FileWriter flwriter = null;
             try {
-                flwriter = new FileWriter(file, true);
+                flwriter = new FileWriter(file);
                 BufferedWriter bfwriter = new BufferedWriter(flwriter);
                 for (Nodo aux = inicio; aux != null ; aux = aux.siguiente) {
                     bfwriter.write(aux.getDocente().toString());
                 }
                 bfwriter.close();
-                System.out.println("Archivo generado satisfactoriamente..");
+                System.out.println(Main.ANSI_CYAN + "Cantidad de registros encontrados --> " + longitud() + Main.ANSI_RESET);
+                System.out.println("Archivo generado satisfactoriamente...");
 
             } catch (IOException e) {
                 e.printStackTrace();

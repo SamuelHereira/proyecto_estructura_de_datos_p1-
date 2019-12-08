@@ -3,22 +3,32 @@ import java.util.Scanner;
 
 public class Main {
 
+    /** Constantes ANSI */
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
+    /** Limpiar pantalla de consola MS-DOS */
     public static void cls() {
         try {
             new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
-        } catch (Exception e) {
-
-        }
+        } catch (Exception e) { }
     }
 
+    /** Pausar la ejecución en consola MS-DOS */
     public static void pause() {
         try {
             new ProcessBuilder("cmd","/c","pause").inheritIO().start().waitFor();
-        } catch (Exception e) {
-
-        }
+        } catch (Exception e) { }
     }
 
+    /** Retorna el menú principal como cadena */
     public static String menuPrincipal() {
         return "PAGO DE DOCENTES" +
         "\n1. Insertar Docente" +
@@ -35,74 +45,66 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
         ListaDocentes l1 = new ListaDocentes();
-        String cedula;
         int opc;
         do {
             Main.cls();
-            opc = Integer.parseInt(JOptionPane.showInputDialog(Main.menuPrincipal()));
-            switch(opc) {
-                case 1:
-                    l1.insertarDocente(Docente.crearDocente());
-                    System.out.println("Datos del docente guardados con éxito");
-                    Main.pause();
-                    Main.cls();
-                    break;
-                case 2:
-                    try {
-                        System.out.println("-----------------------------------------------------------------");
-                        System.out.println("REALIZAR PAGO A DOCENTE");
-                        System.out.print("Cédula: ");
-                        cedula = entrada.nextLine();
-                        Administracion.pagarDocente(l1.buscarDocente(cedula).getDocente());
-                    } catch (NullPointerException e) { }
-                    Main.pause();
-                    Main.cls();
-                    break;
-                case 3:
-                    try {
-                        System.out.println("-----------------------------------------------------------------");
-                        System.out.println("CONSULTAR DOCENTE");
-                        System.out.print("Cédula: ");
-                        cedula = entrada.nextLine();
-                        System.out.println(l1.buscarDocente(cedula).getDocente());
-                    } catch (NullPointerException e) { }
-                    Main.pause();
-                    Main.cls();
-                    break;
-                case 4:
-                    System.out.println("-----------------------------------------------------------------");
-                    System.out.print("LISTA DE TODOS LOS DOCENTES");
-                    l1.visualizar();
-                    Main.pause();
-                    Main.cls();
-                    break;
-                case 5:
-                    System.out.println("-----------------------------------------------------------------");
-                    System.out.println("ELIMINAR DOCENTE");
-                    System.out.print("Cédula: ");
-                    cedula = entrada.nextLine();
-                    l1.eliminarDocente(cedula);
-                    Main.pause();
-                    Main.cls();
-                    break;
-                case 6:
-                    System.out.println("-----------------------------------------------------------------");
-                    l1.exportarListaTxt();
-                    Main.pause();
-                    Main.cls();
-                    break;
-                case 7:
-                    System.out.println("-----------------------------------------------------------------");
-                    System.exit(1);
-                    break;
-                default:
-                    System.out.println("Ingrese una opción valida");
-                    Main.pause();
-                    Main.cls();
+            try {
+                opc = Integer.parseInt(JOptionPane.showInputDialog(Main.menuPrincipal()));
+                switch(opc) {
+                    case 1:
+                        l1.insertarDocente(Docente.crearDocente());
+                        System.out.println("Datos del docente guardados con éxito");
+                        Main.pause();
+                        Main.cls();
+                        break;
+                    case 2:
+                        try {
+                            System.out.println(Main.ANSI_GREEN + "REALIZAR PAGO A DOCENTE" + Main.ANSI_RESET);
+                            Administracion.pagarDocente(l1.buscarDocente(Docente.pedirCedula()).getDocente());
+                        } catch (NullPointerException e) { }
+                        Main.pause();
+                        Main.cls();
+                        break;
+                    case 3:
+                        try {
+                            System.out.println(Main.ANSI_GREEN + "CONSULTAR DOCENTE" + Main.ANSI_RESET);
+                            l1.buscarDocente(Docente.pedirCedula()).getDocente().imprimirDatos();
+                        } catch (NullPointerException e) { }
+                        Main.pause();
+                        Main.cls();
+                        break;
+                    case 4:
+                        System.out.println(Main.ANSI_GREEN + "LISTA DE TODOS LOS DOCENTES" + Main.ANSI_RESET);
+                        l1.visualizar();
+                        Main.pause();
+                        Main.cls();
+                        break;
+                    case 5:
+                        System.out.println(Main.ANSI_GREEN + "ELIMINAR DOCENTE" + Main.ANSI_RESET);
+                        l1.eliminarDocente(Docente.pedirCedula());
+                        Main.pause();
+                        Main.cls();
+                        break;
+                    case 6:
+                        l1.exportarListaTxt();
+                        Main.pause();
+                        Main.cls();
+                        break;
+                    case 7:
+                        System.exit(1);
+                        break;
+                    default:
+                        System.out.println(Main.ANSI_RED + "Ingrese una opción valida" + Main.ANSI_RESET);
+                        Main.pause();
+                        Main.cls();
+                }
+            } catch (Exception e) {
+                System.out.println("Entrada inválida");
+                Main.pause();
+            } finally {
+                opc = 8;
             }
-
         } while(opc != 7);
-
 
     }
 }
