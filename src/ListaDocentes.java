@@ -1,9 +1,7 @@
-import javax.print.Doc;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class ListaDocentes {
 
@@ -51,7 +49,7 @@ public class ListaDocentes {
                 aux = aux.siguiente;
             }
         } else {
-            System.out.println("La lista está vacía");
+            System.out.println("\nLa lista está vacía");
         }
     }
 

@@ -1,4 +1,3 @@
-import javax.print.Doc;
 import java.util.Scanner;
 
 public class Docente {
@@ -89,7 +88,11 @@ public class Docente {
     }
 
     public void setHorasTrabajo(int dias) {
-        this.horasTrabajo = dias * 12;
+        if (this.modalidad.getTipoCarga() == TipoCarga.MEDIO_TIEMPO) {
+            this.horasTrabajo = ((dias * 8) / 2) - this.horasFaltas;
+        } else {
+            this.horasTrabajo = (dias * 8) - this.horasFaltas;
+        }
     }
 
     public float getSueldo() {
@@ -99,24 +102,27 @@ public class Docente {
     public void setSueldo() {
         /** Dependiendo de la modalidad */
         if(this.modalidad instanceof Contrato) {
-            this.sueldo = Modalidad.SUELDO_CONTRATO_COMPLETO;
+            if (this.modalidad.getTipoCarga() == TipoCarga.TIEMPO_COMPLETO) {
+                this.sueldo = Modalidad.SUELDO_CONTRATO_COMPLETO;
+            } else {
+                this.sueldo = Modalidad.SUELDO_CONTRATO_MEDIO;
+            }
         } else if(this.modalidad instanceof Nombramiento) {
-
             if(((Nombramiento) this.modalidad).getTipoNombramiento() == TipoNombramiento.AUXILIAR) {
-                this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AUXILIAR_COMPLETO;
+                if (this.modalidad.getTipoCarga() == TipoCarga.TIEMPO_COMPLETO) this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AUXILIAR_COMPLETO;
+                else this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AUXILIAR_MEDIO;
             } else if(((Nombramiento) this.modalidad).getTipoNombramiento() == TipoNombramiento.AGREGADO) {
-                this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AGREGADO_COMPLETO;
+                if (this.modalidad.getTipoCarga() == TipoCarga.TIEMPO_COMPLETO) this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AGREGADO_COMPLETO;
+                else this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_AGREGADO_MEDIO;
             } else if(((Nombramiento) this.modalidad).getTipoNombramiento() == TipoNombramiento.PRINCIPAL) {
-                this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_PRINCIPAL_COMPLETO;
+                if (this.modalidad.getTipoCarga() == TipoCarga.TIEMPO_COMPLETO) this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_PRINCIPAL_COMPLETO;
+                else this.sueldo = Modalidad.SUELDO_NOMBRAMIENTO_PRINCIPAL_MEDIO;
             }
         }
-        /** Dependiendo del tipo de carga */
-        float valPorHora = this.sueldo / this.horasTrabajo;
-        if(this.modalidad.getTipoCarga() == TipoCarga.MEDIO_TIEMPO) {
-            this.sueldo = this.sueldo/2;
-            this.horasTrabajo = this.horasTrabajo / 2;
-        }
-
+        /** Descuento de horas faltadas */
+        float valPorHora;
+        if (this.modalidad.getTipoCarga() == TipoCarga.TIEMPO_COMPLETO) valPorHora = (this.sueldo / 24) / 8;
+        else valPorHora = (this.sueldo / 24) / 4;
         this.sueldo = this.sueldo - (valPorHora * horasFaltas);
     }
 
@@ -165,7 +171,7 @@ public class Docente {
 
         System.out.println("-----------------------------------------------------------------");
 
-        System.out.println("INGRESE LOS TODOS LOS DATOS DEL DOCENTE");
+        System.out.println("INGRESE TODOS LOS DATOS DEL DOCENTE");
         System.out.print("Nombres: ");
         nombre = ingresar.nextLine();
         docente.setNombres(nombre); // nombres
@@ -173,14 +179,15 @@ public class Docente {
         System.out.print("Apellidos: ");
         apellido = ingresar.nextLine();
         docente.setApellidos(apellido); // apellidos
-
         do {
-            System.out.print("Cédula: ");
-            cedula = ingresar.nextLine();
-            if(!validacionCedula(cedula)) {
-                System.out.println("Ingrese una cedula valida");
-            }
-        } while(!validacionCedula(cedula));
+            do {
+                System.out.print("Cédula: ");
+                cedula = ingresar.nextLine();
+                if((cedula.length() != 10) || (!cedula.matches("[0-9]+"))) {
+                    System.out.println("Ingrese una cedula valida");
+                }
+            } while((cedula.length() != 10) || (!cedula.matches("[0-9]+")));
+        } while (!validacionCedula(cedula));
         docente.setCedula(cedula); // cédula validada
 
         System.out.print("Dirección domiciliaria: ");
@@ -190,15 +197,18 @@ public class Docente {
         do {
             System.out.print("Correo electrónico: ");
             correo = ingresar.nextLine();
-            if(!correo.contains("@")) {
+            if ((!correo.contains("@")) && (!correo.contains("."))) {
                 System.out.println("Ingrese un correo valido");
             }
-        } while(!correo.contains("@"));
+        } while((!correo.contains("@")) || (!correo.contains(".")));
         docente.setCorreo(correo); // correo validado
 
         do {
             System.out.print("Teléfono: ");
             telefono = ingresar.nextLine();
+            if (telefono.length() != 10 || !telefono.matches("[0-9]+")) {
+                System.out.println("Ingrese un teléfono válido");
+            }
         } while(telefono.length() != 10 || !telefono.matches("[0-9]+"));
         docente.setTelefono(telefono); // teléfono validado
 
@@ -243,7 +253,7 @@ public class Docente {
         } while(horasFalta < 0);
         docente.setHorasFaltas(horasFalta); // horas faltadas
 
-        docente.setHorasTrabajo(30); // horas trabajadas
+        docente.setHorasTrabajo(24); // horas trabajadas
         docente.setSueldo(); // sueldo total
         docente.setPagado(false);
 
@@ -270,7 +280,7 @@ public class Docente {
                 "\nNombres: " + this.nombres + "\nApellidos: " + this.apellidos +
                 "\nCédula: " + this.cedula + "\nDirección: " + this.direccion +
                 "\nCorreo: " + this.correo + "\nTeléfono: " + this.telefono +
-                "\n" + msjModalidad + "\nHoras trabajas: " + this.horasTrabajo +
+                "\n" + msjModalidad + "\nHoras trabajadas: " + this.horasTrabajo +
                 "\nHoras faltadas: " + this.horasFaltas + "\nSueldo: " + this.sueldo +
                 "\n" + msjPago;
     }
