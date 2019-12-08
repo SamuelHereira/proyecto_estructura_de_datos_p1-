@@ -111,11 +111,13 @@ public class Docente {
             }
         }
         /** Dependiendo del tipo de carga */
+        float valPorHora = this.sueldo / this.horasTrabajo;
         if(this.modalidad.getTipoCarga() == TipoCarga.MEDIO_TIEMPO) {
             this.sueldo = this.sueldo/2;
+            this.horasTrabajo = this.horasTrabajo / 2;
         }
 
-        this.sueldo = this.sueldo - ((this.sueldo/horasTrabajo)*horasFaltas);
+        this.sueldo = this.sueldo - (valPorHora * horasFaltas);
     }
 
     public boolean getPagado() {
