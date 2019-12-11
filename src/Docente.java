@@ -167,13 +167,24 @@ public class Docente {
         String nombre, apellido, direccion, correo, telefono, modoContrato, tipoNombramiento, tipoCarga, horasFalta;
         int modalidad = 0, nombramiento = 0, carga = 0, faltas = 0;
 
+
         System.out.println(Main.ANSI_GREEN + "INGRESE TODOS LOS DATOS DEL DOCENTE" + Main.ANSI_RESET);
-        System.out.print(Main.ANSI_PURPLE + "Nombres: " + Main.ANSI_RESET);
-        nombre = ingresar.nextLine();
+        do {
+            System.out.print(Main.ANSI_PURPLE + "Nombres: " + Main.ANSI_RESET);
+            nombre = ingresar.nextLine();
+            if(!nombre.matches("^[A-Za-z ]*$")) {
+                System.out.println(Main.ANSI_RED + "No ingrese numeros" + Main.ANSI_GREEN);
+            }
+        } while(!nombre.matches("^[A-Za-z ]*$"));
         docente.setNombres(nombre); // nombres
 
-        System.out.print(Main.ANSI_PURPLE + "Apellidos: " + Main.ANSI_RESET);
-        apellido = ingresar.nextLine();
+        do {
+            System.out.print(Main.ANSI_PURPLE + "Apellidos: " + Main.ANSI_RESET);
+            apellido = ingresar.nextLine();
+            if(!apellido.matches("^[A-Za-z ]*$")) {
+                System.out.println(Main.ANSI_RED + "No ingrese numeros" + Main.ANSI_GREEN);
+            }
+        } while(!apellido.matches("^[A-Za-z ]*$"));
         docente.setApellidos(apellido); // apellidos
 
         docente.setCedula(pedirCedula()); // cédula validada

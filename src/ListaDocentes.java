@@ -120,6 +120,7 @@ public class ListaDocentes {
                 System.out.println(Main.ANSI_CYAN + "Cantidad de registros encontrados --> " + longitud() + Main.ANSI_RESET);
                 System.out.println("Archivo generado satisfactoriamente...");
 
+
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
