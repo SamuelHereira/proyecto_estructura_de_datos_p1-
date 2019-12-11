@@ -33,7 +33,7 @@ public class Main {
         return "PAGO DE DOCENTES" +
         "\n1. Insertar Docente" +
         "\n2. Realizar pago a docente" +
-        "\n3. Consular docente" +
+        "\n3. Consultar docente" +
         "\n4. Listar docentes" +
         "\n5. Eliminar docente" +
         "\n6. Exportar registro de docentes" +
