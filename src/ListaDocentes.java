@@ -108,7 +108,7 @@ public class ListaDocentes {
 
     public void exportarListaTxt() {
         if (inicio != null) {
-            File file = new File("registro.txt");
+            File file = new File("../../../REGISTRO/registro.txt");
             FileWriter flwriter = null;
             try {
                 flwriter = new FileWriter(file);
